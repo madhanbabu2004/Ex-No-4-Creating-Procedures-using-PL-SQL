@@ -11,7 +11,48 @@
 6. Display the employee table
 
 ### Program:
+```
+CREATE TABLE epl(
+empid NUMBER,
+empname VARCHAR(19),
+dept VARCHAR(10),
+salary NUMBER
 
+);
+
+
+CREATE OR REPLACE PROCEDURE emp_data AS BEGIN
+
+INSERT INTO epl(epmid,empname,dept,salary)
+
+values(1, 'Swetha', '"MD',10000000) ;
+
+INSERT INTO epl(epmid,empname,dept,salary)
+
+values(2, 'Anitha’, "HR" ,500000) ;
+
+INSERT INTO epl(epmid,empname,dept,salary)
+
+values(3, 'Divya‘, 'IT',200000);
+
+COMMIT;
+
+FOR emp_rec IN (SELECT * FROM epl)LOOP
+
+DBMS_OUTPUT.PUT_LINE('EMPLOYEE ID:'||emp_rec.empid]||",EMPLOYEE
+NAME: ' | |emp_rec.empname||',DEPARTMENT' | |emp_rec.dept]||',SALARY:" | |emp_rec.salary);
+
+END LOOP;
+
+END;
+
+/
+
+```
 ### Output:
+![output](./c.png)
+![output](./b.png)
+![output](./a.png)
 
 ### Result:
+Thus the procedure has been successfully created in PI/SQL.

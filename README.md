@@ -12,47 +12,34 @@
 
 ### Program:
 ```
-CREATE TABLE epl(
+CREATE TABLE eppplooyeee(
 empid NUMBER,
 empname VARCHAR(19),
 dept VARCHAR(10),
 salary NUMBER
-
 );
 
 
 CREATE OR REPLACE PROCEDURE emp_data AS BEGIN
-
-INSERT INTO epl(epmid,empname,dept,salary)
-
-values(1, 'Swetha', '"MD',10000000) ;
-
-INSERT INTO epl(epmid,empname,dept,salary)
-
-values(2, 'Anitha’, "HR" ,500000) ;
-
-INSERT INTO epl(epmid,empname,dept,salary)
-
-values(3, 'Divya‘, 'IT',200000);
-
+INSERT INTO eppplooyeee(empid,empname,dept,salary)
+values(1, 'BENTEN', 'MANAGER',300000) ;
+INSERT INTO eppplooyeee(empid,empname,dept,salary)
+values(2, 'KANIS', 'JUNIER' ,640000) ;
+INSERT INTO eppplooyeee(empid,empname,dept,salary)
+values(3, 'Divya', 'CIVILL',80000000);
 COMMIT;
 
-FOR emp_rec IN (SELECT * FROM epl)LOOP
-
-DBMS_OUTPUT.PUT_LINE('EMPLOYEE ID:'||emp_rec.empid]||",EMPLOYEE
-NAME: ' | |emp_rec.empname||',DEPARTMENT' | |emp_rec.dept]||',SALARY:" | |emp_rec.salary);
-
+FOR emp_rec IN (SELECT * FROM eppplooyeee)LOOP
+DBMS_OUTPUT.PUT_LINE('EMPLOYEE ID:'||emp_rec.empid||',EMPLOYEE NAME:'||emp_rec.empname||
+',DEPARTMENT:'||emp_rec.dept||',SALARY:'| |emp_rec.salary);
 END LOOP;
-
 END;
-
 /
 
 ```
 ### Output:
-![output](./c.png)
-![output](./b.png)
 ![output](./a.png)
+![output](./b.png)
 
 ### Result:
 Thus the procedure has been successfully created in PI/SQL.
